@@ -1,10 +1,11 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from main.app.views import HelloAPIView, HelloViewSet
+from main.app.views import HelloAPIView, HelloViewSet, UserProfileViewSet
 
 router = DefaultRouter()
 router.register(r"tes-viewset", HelloViewSet, basename="viewset")
+router.register(r"profile", UserProfileViewSet, basename="profile")
 
 
 urlpatterns = [
