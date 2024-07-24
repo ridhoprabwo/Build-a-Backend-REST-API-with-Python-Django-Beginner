@@ -6,11 +6,13 @@ from main.app.views import (
     HelloViewSet,
     UserProfileViewSet,
     UserLoginApiView,
+    ProfileFeedViewSet,
 )
 
 router = DefaultRouter()
 router.register(r"tes-viewset", HelloViewSet, basename="viewset")
 router.register(r"profile", UserProfileViewSet, basename="profile")
+router.register(r"profilefeed", ProfileFeedViewSet, basename="profilefeed")
 
 
 urlpatterns = [
